@@ -65,3 +65,148 @@ body {
         border-radius: 5px;
     }
 }
+/* AUCTIONS */
+.auctions {
+    padding: 3rem 0;
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: $gray;
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        transition: all 0.3s ease;
+        animation: fadeUp 0.8s ease;
+
+        img {
+            width: 100%;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .price {
+            font-weight: bold;
+            color: $primary;
+        }
+
+        .time {
+            font-size: 12px;
+            color: gray;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .view-more {
+        text-align: center;
+        margin-top: 2rem;
+
+        .btn {
+            background: $primary;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 6px;
+            border: none;
+            transition: 0.3s;
+
+            &:hover {
+                background: darken($primary, 10%);
+            }
+        }
+    }
+}
+
+/* CATEGORIES */
+.categories {
+    padding: 3rem 0;
+
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .category {
+        background: $gray;
+        padding: 25px;
+        text-align: center;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+        animation: fadeUp 1s ease;
+
+        &:hover {
+            background: $primary;
+            color: white;
+            transform: scale(1.05);
+        }
+    }
+}
+
+/* NEWSLETTER */
+.newsletter {
+    background: $primary;
+    color: white;
+    padding: 2rem 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .btn {
+        background: white;
+        color: $primary;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        transition: 0.3s;
+
+        &:hover {
+            background: #ddd;
+        }
+    }
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
